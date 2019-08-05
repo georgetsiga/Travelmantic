@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#555555</color>
+    <color name="colorPrimaryDark">#363636</color>
+    <color name="colorAccent">#F15B2A</color>
+    <color name="andela_blue">#3359DF</color>
+    <color name="andela_grey">#86878A</color>
+    <color name="text_grey">#eff0f1</color>
+    <color name="text_red">#D61818</color>
+    <color name="text_pink">#e80a89</color>
+    <color name="text_dark">#444444</color>
+</resources>

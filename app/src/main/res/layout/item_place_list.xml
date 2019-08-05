@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/text_margin_standard_half"
+        card_view:cardCornerRadius="@dimen/text_margin_standard_half">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/place_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/image"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/lay_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/text_margin_standard_half"
+                android:layout_marginStart="@dimen/text_margin_standard_quoter"
+                android:padding="5dp"
+                android:textAppearance="@style/Header"
+                app:layout_constraintBottom_toBottomOf="@+id/place_image"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Coming Soon"/>
+
+            <TextView
+                android:id="@+id/lay_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/text_margin_standard"
+                android:layout_marginStart="@dimen/text_margin_standard"
+                android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                android:textAppearance="@style/Sub_Header"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_image"
+                tools:text="@string/price_hint"/>
+
+            <TextView
+                android:id="@+id/lay_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/text_margin_standard"
+                android:layout_marginStart="@dimen/text_margin_standard_half"
+                android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                android:padding="8dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:text="@string/description_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lay_price"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

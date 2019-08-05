@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/text_margin_standard">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lay_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_margin_standard"
+        android:layout_marginStart="@dimen/text_margin_standard"
+        android:layout_marginTop="@dimen/text_margin_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/title_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lay_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_margin_standard"
+        android:layout_marginStart="@dimen/text_margin_standard"
+        android:layout_marginTop="@dimen/text_margin_standard"
+        app:layout_constraintTop_toBottomOf="@+id/lay_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/price_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lay_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_margin_standard"
+        android:layout_marginStart="@dimen/text_margin_standard"
+        android:layout_marginTop="@dimen/text_margin_standard"
+        app:layout_constraintTop_toBottomOf="@+id/lay_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="4"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:hint="@string/description_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_margin_standard"
+        android:layout_marginStart="@dimen/text_margin_standard"
+        android:layout_marginTop="@dimen/text_margin_standard"
+        android:padding="@dimen/text_margin_standard_quoter"
+        android:text="@string/select_image"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/lay_description"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/text_margin_standard"
+        android:layout_marginStart="@dimen/text_margin_standard"
+        android:layout_marginTop="@dimen/text_margin_standard"
+        android:padding="@dimen/text_margin_standard_quoter"
+        android:text="@string/save"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_description"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_margin_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_image"
+        app:srcCompat="@android:color/transparent"
+        android:contentDescription="@string/image"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
